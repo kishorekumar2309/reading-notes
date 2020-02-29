@@ -10,8 +10,6 @@
 
 - ***distinct***() - returns a stream with unique elements
 
-
-
 ### 2. SLICING A STREAM
 
 #### 2.1. Slicing using a predicate
@@ -27,8 +25,6 @@
 
 - ***skip***(n) - return a stream that discards the first n elements
 
-
-
 ### 3. MAPPING
 
 In SQL you can select a particular column from a table - the Streams API provides similar facilities through the map and flatMap methods
@@ -40,8 +36,6 @@ In SQL you can select a particular column from a table - the Streams API provide
 #### 3.2. Flattening streams
 
 - ***flatMap***(Function) - lets you replace each value of a stream with another stream and then concatenates all the generated streams into a single stream
-
-
 
 ### 4. FINDING AND MATCHING
 
@@ -67,8 +61,6 @@ Return Optional<T> incase of no match, instead of null
 - ***findFirst***() - return the first element
 
 ***findFirst vs findAny***: findFirst is more constraining in parallel, so prefer findAny
-
-
 
 ### 5. REDUCING
 
@@ -121,8 +113,6 @@ Return Optional<T> incase of no match, instead of null
 |  reduce   |    Terminal (stateful-bounded)    | Optional<T> |       BinaryOperator<T>        |     (T, T) -> T     |
 |   count   |             Terminal              |    long     |                                |                     |
 
-
-
 ### 7. NUMERIC STREAMS
 
 #### 7.1. Primitive stream specializations
@@ -136,8 +126,6 @@ Return Optional<T> incase of no match, instead of null
 #### 7.2. Numeric ranges
 
 - ***range and rangeClosed*** - in classes *IntStream and LongStream* . Both methods take the starting value of the range as the first parameter and the end value of the range as the second parameter. But range is exclusive, whereas rangeClosed is inclusive
-
-
 
 ### 8. BUILDING STREAMS
 
@@ -165,8 +153,6 @@ Return Optional<T> incase of no match, instead of null
 - generally sensible to use limit(n) on such streams to avoid printing an infinite number of values
 - use takeWhile instead of filter, to terminate after a condition is met
 - ***generate***: takes a lambda of type Supplier<T> to provide new values. Let’s look at an example of how to use it
-
-
 
 ### SUMMARY
 
